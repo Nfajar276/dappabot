@@ -1,8 +1,5 @@
-exports.menu = (ucapan, pushname, mundur, ownerName, botName, tanggal, jam, runtime, isOwner, isPremium, sisalimit, limitCount, sisaGlimit, gcount, expired, prefix) => {
-    return `${ucapan} ${pushname}
-    
-Hitung Mundur Bulan Ramadhan
-${mundur}
+exports.menu = (ucapan, pushname, ownerName, botName, tanggal, jam, runtime, prefix) => {
+    return `${ucapan.data.result} ${pushname}
 
 👑 Creator : ${ownerName}
 🤖 Bot Name : ${botName}
@@ -11,49 +8,12 @@ ${mundur}
 ⏳ Runtime
 ${runtime}
 
-*USER INFO*
-
-*‣ Name : ${pushname}*
-*‣ Status : ${isOwner ? 'Owner' : isPremium ? 'Premium' : 'Gratisan'}*
-*‣ Limit : ${isPremium ? 'Unlimited' : `${sisalimit}/${limitCount}`}*
-*‣ Limit Game : ${isOwner ? 'Unlimited' : `${sisaGlimit}/${gcount}`}*
-*‣ Expired Prem : ${isOwner ? '-' : isPremium ? expired : 'Not Premium'}*
-
-*LIST MENU BOT*
-
-❏ ${prefix}menusimple
-❏ ${prefix}menusticker
-❏ ${prefix}menugroup
-❏ ${prefix}menusistem
-❏ ${prefix}menustore
-❏ ${prefix}menudownload
-❏ ${prefix}menugame
-❏ ${prefix}menurandom
-❏ ${prefix}menusearch
-❏ ${prefix}menuowner
-`
-}
-
-exports.simpleMenu = (prefix) => {
-    return `
+*SIMPLE MENU*
 ❏ ${prefix}sticker
 ❏ ${prefix}attp
 ❏ ${prefix}nulis
-❏ ${prefix}limit
-`
-}
 
-exports.stickerMenu = (prefix) => {
-    return `
-❏ ${prefix}sticker
-❏ ${prefix}swm
-❏ ${prefix}attp
-❏ ${prefix}pentol
-`
-}
-
-exports.groupMenu = (prefix) => {
-    return `
+*GROUP MENU*
 ❏ ${prefix}add
 ❏ ${prefix}kick
 ❏ ${prefix}welcome
@@ -68,92 +28,36 @@ exports.groupMenu = (prefix) => {
 ❏ ${prefix}hidetag
 ❏ ${prefix}opengrup
 ❏ ${prefix}closegrup
-❏ ${prefix}checksewa
-`
-}
-
-exports.sistemMenu = (prefix) => {
-    return `
 ❏ ${prefix}antilink
 ❏ ${prefix}antiwame
-❏ ${prefix}antiyt
-❏ ${prefix}antitele
-❏ ${prefix}antibitly
+❏ ${prefix}checksewa
 ❏ ${prefix}setcmd
 ❏ ${prefix}delcmd
-`
-}
 
-exports.storeMenu = (prefix) => {
-    return `
-❏ ${prefix}list
+*DOWNLOAD MENU*
+❏ ${prefix}instagram <error>
+❏ ${prefix}youtube <error>
+❏ ${prefix}tiktok
+
+*STORE MENU*
 ❏ ${prefix}addlist
 ❏ ${prefix}dellist
 ❏ ${prefix}update
-❏ ${prefix}tambah
-❏ ${prefix}kurang
-❏ ${prefix}kali
-❏ ${prefix}bagi
-❏ y < reply chat >
-❏ d < reply chat >
-`
-}
+❏ ${prefix}list
+❏ y < reply orderan >
+❏ d < reply orderan >
 
-exports.downloadMenu = (prefix) => {
-    return `
-❏ ${prefix}instagram
-❏ ${prefix}youtube
-❏ ${prefix}tiktok
-`
-}
-
-exports.gameMenu = (prefix) => {
-    return `
-❏ ${prefix}tebakgambar
-❏ ${prefix}family100
-❏ ${prefix}tictactoe
-❏ ${prefix}suit
-❏ ${prefix}topglobal
-❏ ${prefix}toplocal
-`
-}
-
-exports.randomMenu = (prefix) => {
-    return `
-❏ ${prefix}asupan
-❏ ${prefix}couple
-❏ ${prefix}meme1
-❏ ${prefix}meme2
-❏ ${prefix}gachacewek
-❏ ${prefix}gachacowok
-`
-}
-
-exports.searchMenu = (prefix) => {
-    return `
-❏ ${prefix}nickff 
-❏ ${prefix}nickml
-❏ ${prefix}nickpubg
-`
-}
-
-exports.ownerMenu = (prefix) => {
-    return `
+*OWNER MENU*
 ❏ ${prefix}bc
-❏ ${prefix}join
-❏ ${prefix}exif
-❏ ${prefix}self
-❏ ${prefix}public
 ❏ ${prefix}setlogo
 ❏ ${prefix}setprefix
+❏ ${prefix}exif
+❏ ${prefix}public
+❏ ${prefix}self
 ❏ ${prefix}ban
 ❏ ${prefix}unban
-❏ ${prefix}listban
+❏ ${prefix}join
 ❏ ${prefix}addsewa
 ❏ ${prefix}delsewa
-❏ ${prefix}listsewa
-❏ ${prefix}addprem
-❏ ${prefix}delprem
-❏ ${prefix}listprem
 `
 }
